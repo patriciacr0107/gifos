@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gifos</title>
+    <link rel='stylesheet' href='css/gifos.css'>
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet" />
+</head>
+
+<body class="diurno">
+
+    <nav>
+        <div class="nav">
+            <img src="assets/img/logo-mobile.svg" alt="Logo" class="logo diurno" onclick="mostrarHome()">
+            <!-- Boton menu hamburguesa -->
+            <div class="menu-activador diurno">
+                <input type="checkbox" id="lanzador" class="diurno" />
+                <label for="lanzador">
+                    <span class="menu-activador-linea"></span>
+                    <span class="menu-activador-linea"></span>
+                    <span class="menu-activador-linea"></span>
+                </label>
+                <!-- menu -->
+                <ul class="menu-mobile">
+                    <li><a href="#nocturno" onclick="cambiarModo()" id="nocturno">Modo nocturno</a><br>_________</li>
+                    <li><a href="#favoritos" onclick="mostrarFavoritos()" id="fav-mnu">Favoritos</a><br>_________
+                    </li>
+                    <li><a href="#misgifos" onclick="mostrarSeccionMisGifos()">Mis GIFOS</a><br>_________</li>
+                </ul>
+            </div>
+            <div class="menu-desktop diurno">
+                <ul>
+                    <li><a href="#nocturno" onclick="cambiarModo()" id="nocturno-desktop" class="item-menu-desktop">Modo
+                            nocturno</a></li>
+                    <li><a href="#favoritos" onclick="mostrarFavoritos()" id="fav-mnu-desk"
+                            class="item-menu-desktop">Favoritos</a></li>
+                    <li><a href="#misgifos" onclick="mostrarSeccionMisGifos()" id="misgif-mnu"
+                            class="item-menu-desktop">Mis GIFOS</a></li>
+                    <li id="add-Gifo"><a href="#addgifos" onclick="mostrarCreacionGifos()" id="add-Gifo-mnu"><img
+                                src="assets/img/button-crear-gifo.svg" alt="" id="add-Gifo-img"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <h1 class="diurno">Inspírate, busca, guarda, y crea los mejores <span>GIFOS</span></h1>
+        <div class="buscar-div diurno">
+            <img src="assets/img/ilustra_header.svg" alt="header" id="img-header">
+            <div class="input-icon-search" id="input-icon-search">
+                <input type="text" name="buscar" id="search-input" placeholder="Busca GIFOS y mas" autocomplete="off"
+                    class="search-input diurno">
+                <img src="assets/img/icon-search.svg" alt="" id="icon-search" class="icon-search diurno"
+                    aria-hidden="true">
+            </div>
+        </div>
+    </header>
+    <section class="diurno favorites">
+        <div class="saved-favorites" id="saved-favorites">
+            <img src="assets/img/icon-favoritos.svg" alt='favoritos'>
+            <span id="saved-favorites-name">Favoritos</span>
+            <div class="saved-favorites-gallery" id="saved-favorites-gallery">
+
+            </div>
+            <input type="button" value="VER MÁS" class="ver-mas-btn" id="ver-mas-btn-fav">
+        </div>
+    </section>
+
+    <section class="diurno favorites">
+        <div class="mis-gifos saved-favorites" id="mis-gifos">
+            <img src="assets/img/icon-mis-gifos.svg" alt='Mis-gifos'>
+            <span id="mis-gifos-name">Mis GIFOS</span>
+            <div class="mis-gifos-gallery saved-favorites-gallery" id="mis-gifos-gallery">
+
+            </div>
+            <input type="button" value="VER MÁS" class="ver-mas-btn" id="ver-mas-btn-misgif">
+        </div>
+    </section>
+
+    <section class="diurno">
+        <div class="creacion-gif" id="creacion-gif">
+            <div class="creacion-camara">
+                <img src="assets/img/camara.svg" alt="" class="camara1">
+                <img src="assets/img/element-luz-camara.svg" alt="" class="camara2">
+            </div>
+            <div class="recuadro-creacion">
+                <div class="contenido-creacion-marco">
+                    <div id='borde-1' class="superior izquierda"></div>
+                    <div id='borde-2' class="superior derecha"></div>
+
+
+                    <div class="contenido-creacion">
+                        <div class="contenido-camara" id='contenido-camara'>
+                            <video id="video-container"></video>
+                            <div id="img-container">
+                                <img src="assets/img/prueba.png" id="img-element" alt="img-element">
+                            </div>
+                        </div>
+                        <p id='titulo-paso'>Aquí podrás crear tus propios <span>GIFOS</span></p>
+                        <p id='descripcion-paso'>¡Crea tu GIFO en sólo 3 pasos! <br> (sólo necesitas una cámara para
+                            grabar un video)</p>
+                    </div>
+                    <div id='borde-3' class="inferior izquierda"></div>
+                    <div id='borde-4' class="inferior derecha"></div>
+
+                </div>
+            </div>
+            <div class="pasos-creacion">
+                <div class="pasos-btn" id="paso-1">1</div>
+                <div class="pasos-btn" id="paso-2">2</div>
+                <div class="pasos-btn" id="paso-3">3</div>
+            </div>
+            <div class="opciones-extras" id='opciones-extras'>
+                <span id='tiempo'>00:00:00</span>
+                <a href="#REPETIR" id='repetirLink' onclick="repetirGrabacion()">REPETIR CAPTURA</a>
+            </div>
+            <div class="separador-creacion"></div>
+            <div class="opciones-creacion">
+                <input type="button" value="Comenzar" class="btn-creacion ver-mas-btn" id="btn-creacion">
+            </div>
+
+            <img src="assets/img/pelicula.svg" alt="" class="pelicula-img">
+        </div>
+
+    </section>
+
+    <section class="diurno" id="trending">
+        <div class="trending">
+            <span>Trending:</span>
+            <p id="trending-items">Reactions, Entertainment, Sports, Stickers, Artists</p>
+        </div>
+        <div class="border" id="border"></div>
+        <div class="trending-result" id="trending-result">
+            <span id="trending-result-name">Mascotas</span>
+            <div class="trending-result-gallery" id="trending-result-gallery">
+
+            </div>
+            <input type="button" value="VER MÁS" class="ver-mas-btn" id="ver-mas-btn">
+        </div>
+    </section>
+    <div class="gif-card diurno" id="gif-card">
+        <div class="gif-card-img" id="gif-card-img"><img src="assets/img/prueba.png" alt=""></div>
+        <div class="gif-card-container" id="gif-card-container">
+            <div class="gif-card-data"> <span id="user">User</span><span id="title">Titulo</span> </div>
+            <div class="options-gif" id="options-gif">
+                <div id="fav-img">
+                    <img src="assets/img/icon-fav.svg" alt="" id="icon-fav">
+                </div>
+                <div id="fav-img-active">
+                    <img src="assets/img/icon-fav.svg" alt="" id="icon-fav-active">
+                </div>
+                <div id="download-img">
+                    <img src="assets/img/icon-download.svg" alt="" id="icon-download">
+                </div>
+            </div>
+
+        </div>
+        <img src="assets/img/close.svg" alt="" class="icon-close-card" aria-hidden="true" id="icon-close-card">
+    </div>
+    <section class="diurno">
+        <div class="trending-gifos" id='trending-gifos'>
+            <span>Trending GIFOS</span>
+            <p>Mira los últimos GIFOS de nuestra comunidad.</p>
+            <div class="horizontal-slider" id="horizontal-slider">
+                <div class="slider-container" id="slider-container">
+
+                </div>
+            </div>
+            <div class="horizontal-slider-desktop" id="horizontal-slider-desktop">
+                <div class="slider-left diurno" id="slider-left"><img src="assets/img/button-slider-left.svg" alt="">
+                </div>
+                <div class="slider-container-desktop" id="slider-container-desktop">
+
+                </div>
+                <div class="slider-right diurno" id="slider-right"><img src="assets/img/Button-Slider-right.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class='diurno'>
+        <div class="social-media">
+            <span class="compartir">Compartir en:</span>
+            <div>
+                <a href="http://www.facebook.com" class="facebook-link" target="_blank">
+                    <img src="assets/img/icon_facebook.svg" alt="facebook" class="facebook">
+                </a>
+                <a href="http://www.twitter.com" class="twitter-link" target="_blank">
+                    <img src="assets/img/icon-twitter.svg" alt="twitter" class="twitter">
+                </a>
+                <a href="http://www.instagram.com" class="instagram-link" target="_blank">
+                    <img src="assets/img/icon_instagram-hover.svg" alt="instagram" class="instagram">
+                </a>
+            </div>
+        </div>
+        <span class="copyright">© GIFOS 2020 All Rights Reserved.</span>
+    </footer>
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+    <script src="js/gifos.js"></script>
+</body>
+
+</html>

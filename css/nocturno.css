@@ -1,0 +1,154 @@
+/************************modo oscuro*************************/
+.nocturno{ 
+    background-color: #37383C; 
+    color: #FFFFFF; 
+}
+/**logo**/
+img.nocturno{
+    content: url("../assets/img/logo-mobile-modo-noct.svg");
+}
+/**menu mobile*/
+.nocturno .menu-activador-linea {
+    background-color: #FFFFFF;
+}
+.nocturno input:checked  ~ ul{
+    background: #000000;
+    opacity: 1;
+}
+.nocturno input:checked  ~ ul li{
+    background:#000000;
+    color: #FFFFFF;
+    opacity: 1;
+}
+/*************search***********************/
+.nocturno header .search-input {
+    background: #37383C;
+    border: 1px solid #FFFFFF;
+    color: #6B7989;
+}
+
+.nocturno .autocomplete-container {
+    border: 1px solid #FFFFFF;
+}
+
+/**********trending************/
+.nocturno .trending span {
+    color: #FFFFFF;
+}
+.nocturno .trending a {
+    color: #FFFFFF;
+}
+.nocturno .trending-gifos {
+    background: #222326;
+}
+.nocturno .trending-gifos span {
+    color: #FFFFFF;
+}
+
+.nocturno .trending-gifos p {
+    color: #FFFFFF;
+}
+.nocturno .trending-result span {
+    color: #FFFFFF;
+}
+
+/****************footer********/
+.nocturno .compartir {
+    color: #FFFFFF;
+}
+
+.nocturno .copyright {
+    color: #FFFFFF;
+}
+
+/***************menu desktop*****************/
+.nocturno .item-menu-desktop {
+    color: #FFFFFF;
+}
+
+.nocturno ul li a:hover {
+    color: #FFFFFF;
+    text-decoration: underline #00F3BB;
+    
+}
+.nocturno .menu-activo {
+    color: #9CAFC3;  
+}
+
+/********************slider**********************/
+
+.nocturno .slider-left{
+    align-self:center;
+    content: url("../assets/img/button-slider-left-md-noct.svg");
+    visibility: hidden;
+    text-align: right;
+    cursor: pointer;
+ }
+.nocturno .slider-right{
+    align-self: center;
+    cursor: pointer;
+    content: url("../assets/img/button-slider-right-md-noct.svg");
+}
+.nocturno .slider-left:hover{
+    align-self: center;
+    content: url("../assets/img/button-slider-left-hover.svg");
+ }
+ .nocturno .slider-right:hover{
+    align-self: center;
+    content: url("../assets/img/Button-Slider-right-hover.svg");
+}
+.nocturno #user {
+    color: #FFFFFF;
+}
+.nocturno #title {
+    color: #FFFFFF;
+}
+
+/***********************favoritos*********************/
+.nocturno .ver-mas-btn {
+    background: #37383C;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.nocturno .ver-mas-btn:hover {
+    background: #FFFFFF;
+    border: 1px solid #37383C;
+    color: #37383C;
+}
+
+/*****************************crear gifo**************/
+
+.nocturno #add-Gifo-img {
+    content: url("../assets/img/CTA-crear-gifo-modo-noc.svg");
+}
+
+.nocturno #add-Gifo-img:hover {
+    content: url("../assets/img/CTA-crear-gifo-hover-modo-noc.svg");
+}
+
+.nocturno #add-Gifo-img:active {
+    content: url("../assets/img/CTA-crear-gifo-active.svg");
+}
+.nocturno .pelicula-img {
+    content: url("../assets/img/pelicula-modo-noc.svg");
+}
+.nocturno .creacion-camara .camara1 {
+    width: 60%;
+    content: url("../assets/img/camara-modo-noc.svg");
+}
+.nocturno .creacion-camara .camara2 {
+    width: 40%;
+    content: url("../assets/img/Path-2.svg");
+}
+.nocturno .pasos-btn {
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    background-color: #37383C;
+}
+
+.nocturno .pasos-btn-act {
+    border: 1px solid #37383C;
+    color: #37383C;
+    background-color: #FFFFFF;
+}

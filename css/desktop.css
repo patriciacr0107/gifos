@@ -1,0 +1,175 @@
+/*************************************menu*********************************/
+
+html {
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 801px;
+    max-width: 1440px;
+}
+body {
+    min-width: 1080px;
+}
+nav{
+    height: 90px;
+    width: 78.4%;
+    padding-left: 10.8%;
+    padding-right: 10.8%;
+}
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    position: relative;  
+    height: 90px;
+    
+}
+.logo {
+    width: 59.1px;
+    height: 59.1px;
+    margin-top: 18px;
+    margin-bottom: 12.9px;
+}
+.menu-activador{
+    display: none;
+}
+.menu-desktop {
+    display: inline-block;
+}
+.menu-desktop ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content:center;
+    align-content: center;
+}
+.item-menu-desktop {    
+    display: block;
+    text-decoration: none;
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 13px;
+    color: #572EE5;
+    letter-spacing: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.menu-desktop ul li a:hover {
+    display: block;
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 13px;
+    color: #572EE5;
+    letter-spacing: 0;
+    text-align: center;
+    text-decoration: underline #00F3BB;
+    
+}
+
+.menu-desktop ul li a:active {
+    font-family: "Montserrat";
+    font-size: 13px;
+    color: #9CAFC3;
+    letter-spacing: 0;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+}
+.menu-desktop ul li {
+    padding: 26px 0 26px 48px;
+    align-self: center;
+}
+
+#add-Gifo-img {
+    content: url("../assets/img/button-crear-gifo.svg");
+}
+
+#add-Gifo-img:hover {
+    content: url("../assets/img/CTA-crear-gifo-hover.svg");
+}
+
+#add-Gifo-img:active {
+    content: url("../assets/img/CTA-crear-gifo-active.svg");
+}
+
+.add-Gifo {
+    content: url("../assets/img/CTA-crear-gifo-active.svg");
+}
+.menu-activo {
+    color: #9CAFC3;  
+}
+
+
+/******************************header*********************/
+h1 {
+    font-size: 35px;
+    line-height: 50px;
+    margin-top: 5%;
+}
+h1 span {
+    font-size: 35px;
+    line-height: 50px;
+}
+#img-header {
+    margin-top: 1.6%;
+    border: 0;
+    width: 399px;
+    height: 190px;
+}
+
+header .search-input {
+    width: 551px;
+    height: 50px;
+    
+}
+header .search-input-list{
+    width: 532px;
+    height: 50px;
+   
+}
+.autocomplete-container {
+    width: 606px;
+   
+}
+.autocomplete-list {
+    list-style: none;
+    width: 561px;
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 22px;
+}
+
+/******************************trending*******************************/
+.trending {
+    padding-top: 73px;
+}
+.trending span {
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.trending p {
+    font-size: 16px;
+    line-height: 25px;
+}
+
+/*---------------------------------footer----------------------------*/
+footer {
+    position: relative;
+}
+.social-media{
+    display: flex;
+    width: 50%;
+    padding-top: 0;
+}
+
+.social-media div{
+    padding-top: 0;
+    
+}
+.copyright {
+    position: absolute;
+    top: 47px;
+    right: 0;
+}
